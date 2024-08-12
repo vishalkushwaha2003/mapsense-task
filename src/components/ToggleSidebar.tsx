@@ -1,6 +1,4 @@
-// src/components/Sidebar.tsx
 import React, { useEffect, useState } from "react";
-import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import ClearIcon from "@mui/icons-material/Clear";
 import LayersOutlinedIcon from "@mui/icons-material/LayersOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
@@ -8,20 +6,19 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 // Define the types for props
 interface SidebarProps {
   clickedFixSidebarItem: string;
-  isFixSidebarItemClicked:boolean;
+  isFixSidebarItemClicked: boolean;
+  setIsFixSidebarItemClicked: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // Define the type for the icon state
 type IconType = React.ReactNode | null;
 
-const ToggleSidebar: React.FC<SidebarProps> = ({ clickedFixSidebarItem ,isFixSidebarItemClicked}) => {
-  const [isOpen, setIsOpen] = useState<boolean>(isFixSidebarItemClicked);
+const ToggleSidebar: React.FC<SidebarProps> = ({ clickedFixSidebarItem, isFixSidebarItemClicked, setIsFixSidebarItemClicked }) => {
   const [isClickedItemVal, setIsClickedItemVal] = useState<string>(clickedFixSidebarItem);
   const [isClickedItemIcon, setIsClickedItemIcon] = useState<IconType>(null);
 
   useEffect(() => {
     setIsClickedItemVal(clickedFixSidebarItem);
-    setIsOpen(isFixSidebarItemClicked)
 
     setIsClickedItemIcon(() => {
       switch (clickedFixSidebarItem.toLowerCase()) {
@@ -33,26 +30,17 @@ const ToggleSidebar: React.FC<SidebarProps> = ({ clickedFixSidebarItem ,isFixSid
           return null;
       }
     });
-  }, [clickedFixSidebarItem,isFixSidebarItemClicked]);
+  }, [clickedFixSidebarItem]);
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsFixSidebarItemClicked(!isFixSidebarItemClicked);
   };
 
   return (
-    <div className="flex z-9">
-      {/* <ArrowForwardOutlinedIcon
-        onClick={toggleSidebar}
-        className="absolute hover:cursor-pointer rounded-md bg-slate-300"
-        sx={{
-          width: "30px",
-          height: "30px",
-        }}
-      /> */}
-
+    <div className=" ">
       <div
-        className={`absolute h-[100vh] w-64 bg-slate-200 text-white transition-transform duration-200 transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`absolute z-9 ${isFixSidebarItemClicked?'border-r border-slate-600':''} h-[100vh] w-64 bg-slate-200 text-white transition-transform duration-200 transform ${
+          isFixSidebarItemClicked ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div>

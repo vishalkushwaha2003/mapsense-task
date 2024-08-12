@@ -1,11 +1,19 @@
+import React from 'react';
 
-
-function MainContent() {
-  return (
-    <div className="">
-      dfdfd
-    </div>
-  )
+interface MainContentProps {
+  isFixSidebarItemClicked: boolean;
 }
 
-export default MainContent
+const MainContent: React.FC<MainContentProps> = ({ isFixSidebarItemClicked }) => {
+  return (
+    <div
+      className={`transition-all duration-200 ${
+        isFixSidebarItemClicked ? 'w-[calc(100vw-256px)] ml-[256px] ' : 'w-full'
+      }`}
+    >
+      rergeg
+    </div>
+  );
+};
+
+export default MainContent;
