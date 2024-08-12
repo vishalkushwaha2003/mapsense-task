@@ -2,8 +2,8 @@
 
 function MainContent() {
   return (
-    <div>
-      
+    <div className="">
+      dfdfd
     </div>
   )
 }

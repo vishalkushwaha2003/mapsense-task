@@ -1,14 +1,16 @@
 import FixSidebar from "./components/FixSidebar"
+import MainContent from "./components/MainContent"
 import Sidebar from "./components/ToggleSidebar"
 
 
 function App() {
   return (
-    <div className="bg-red-700">
+    <div className=" flex">
      <div className="flex">
      <FixSidebar/>
      <Sidebar/>
      </div>
+     <MainContent/>
 
     </div>
   )

@@ -11,32 +11,34 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex z-9">
     
        
        
      
       <ArrowForwardOutlinedIcon
        onClick={toggleSidebar}
-       className=" text-white rounded-md bg-slate-400/30 "
+       className="absolute hover:cursor-pointer   rounded-md bg-slate-300 "
+       sx={{
+        width:'30px',
+        height:'30px',
+       }}
       
       />
       
 
       <div
-        className={`absolute h-[100vh] w-64 bg-gray-800 text-white transition-transform transform ${
+        className={`absolute h-[100vh] w-64 bg-slate-200 text-white transition-transform duration-200 transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
        <ClearIcon
          onClick={toggleSidebar}
+         className='absolute hover:cursor-pointer right-2 top-2'
        />
       </div>
 
-      <div className="flex-1 p-4">
-        <h1 className="text-2xl">Main Content Area</h1>
-        <p>This is where the main content will go.</p>
-      </div>
+      
     </div>
   );
 };
