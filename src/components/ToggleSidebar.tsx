@@ -53,7 +53,7 @@ const ToggleSidebar: React.FC<SidebarProps> = ({
       >
         <div>
           <div className="h-10 flex items-center px-2 border-b text-slate-800 border-slate-400">
-            {isClickedItemIcon} <p>{isClickedItemVal}</p>
+            {isClickedItemIcon} <p className="font-medium">{isClickedItemVal}</p>
           </div>
           <ClearIcon
             onClick={toggleSidebar}
