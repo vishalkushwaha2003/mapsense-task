@@ -51,7 +51,7 @@ const ToggleSidebar: React.FC<SidebarProps> = ({
           isFixSidebarItemClicked ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div>
+        <div >
           <div className="h-10 flex items-center px-2 border-b text-slate-800 border-slate-400">
             {isClickedItemIcon} <p className="font-medium">{isClickedItemVal}</p>
           </div>
@@ -59,6 +59,8 @@ const ToggleSidebar: React.FC<SidebarProps> = ({
             onClick={toggleSidebar}
             className="absolute text-slate-900 hover:cursor-pointer hover:bg-slate-300 duration-200 right-2 top-2"
           />
+
+          
         </div>
       </div>
     </div>

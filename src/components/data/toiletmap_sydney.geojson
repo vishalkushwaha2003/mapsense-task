@@ -1,0 +1,1676 @@
+{
+  "type": "FeatureCollection",
+  "name": "kingspark_poi",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 65,
+        "name": "Saw Ave Lawn South",
+        "level": null,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.823942563396599, -31.961682235799035]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "Zamia Car Park",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": "2 hr free parking weekdays and all day parking on weekends. Additional parking available at P3 Car Park.",
+        "address": "-",
+        "openingtimes": "-",
+        "url": "-",
+        "urlname": "-",
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.82197180628272",
+        "latitude": "-31.96627833646661"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.821971806282718, -31.966278336466608]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Parking",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.82113882950796",
+        "latitude": "-31.964221291367913"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.821138829507959, -31.964221291367913]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "Toilets 1",
+        "level": 0,
+        "spacetype": "Toilet",
+        "sporttype": "Male, Woman",
+        "icon": "restroom",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.82208726840994",
+        "latitude": "-31.96592150541662"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.822087268409945, -31.96592150541662]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "Parking Lot",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.82327333249332",
+        "latitude": "-31.962006767837988"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.823273332493315, -31.962006767837988]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "Toilets 2",
+        "level": 0,
+        "spacetype": "Toilet",
+        "sporttype": "Male, Woman",
+        "icon": "restroom",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.82318055042681",
+        "latitude": "-31.961509979553945"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.823180550426812, -31.961509979553945]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "name": "Car Park 7",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83801743377138",
+        "latitude": "-31.953043174499385"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.838017433771384, -31.953043174499385]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "name": "Car Park 8",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83901535644219",
+        "latitude": "-31.954414709946047"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.839015356442189, -31.954414709946047]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "name": "Car Park 1 entry and exit",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8379019716442",
+        "latitude": "-31.954963143452268"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.8379019716442, -31.954963143452268]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 64,
+        "name": "Saw Ave Lawn North",
+        "level": null,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.823490778843365, -31.960430745827971]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "name": "Car Park 1",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8404998695061",
+        "latitude": "-31.95401672185852"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.840499869506104, -31.954016721858519]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "name": "Car Park 2",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84296993429862",
+        "latitude": "-31.956462353263916"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.842969934298623, -31.956462353263916]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "name": "Car Park 3",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84259674420896",
+        "latitude": "-31.957508461834582"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.842596744208961, -31.957508461834582]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "name": "Wadjuk Car Park",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84219675041119",
+        "latitude": "-31.96024088319658"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.84219675041119, -31.96024088319658]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "name": "Forrest Car Park",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84135140269419",
+        "latitude": "-31.961797732250233"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.841351402694187, -31.961797732250233]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "name": "Car Park 4",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83802568106653",
+        "latitude": "-31.962412155581628"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.838025681066526, -31.962412155581628]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "name": "Car Park 5",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83641745858031",
+        "latitude": "-31.96428251361362"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.836417458580314, -31.964282513613622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "name": "Roe Car Park",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83718445699668",
+        "latitude": "-31.965947743041085"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.837184456996681, -31.965947743041085]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 18,
+        "name": "Balga Carpark",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83421130722144",
+        "latitude": "-31.968690408024607"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.834211307221437, -31.968690408024607]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 19,
+        "name": "Swan Carpark",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "DrivePark",
+        "icon": "parking",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83037837696325",
+        "latitude": "-31.97169491396217"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.830378376963253, -31.971694913962171]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 20,
+        "name": "Drynandra Lookout",
+        "level": 0,
+        "spacetype": "Venues",
+        "sporttype": "Lookout",
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": "115.83078249440845",
+        "latitude": "-31.971768374671715"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.830782494408453, -31.971768374671715]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 21,
+        "name": "Roe Toilet",
+        "level": 0,
+        "spacetype": "Toilet",
+        "sporttype": "Male, Female",
+        "icon": "restroom",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83672467031178",
+        "latitude": "-31.966241166630137"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.836724670311781, -31.966241166630137]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 22,
+        "name": "Transperth Bus Stop 1",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "Bus",
+        "icon": "bus",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84439980903485",
+        "latitude": "-31.954649565843063"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.844399809034854, -31.954649565843063]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 23,
+        "name": "Transperth  Bus Stop 2",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "Bus",
+        "icon": "bus",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84423692496257",
+        "latitude": "-31.95475890264826"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.844236924962573, -31.954758902648258]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 25,
+        "name": "Wardong Bus Park",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "Bus",
+        "icon": "bus",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84058646610171",
+        "latitude": "-31.958682695764214"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.840586466101712, -31.958682695764214]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 26,
+        "name": "Community Shelter",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": "115.83685121356596",
+        "latitude": "-31.95328198450223"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.836851213565964, -31.95328198450223]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 27,
+        "name": "Male, Female toilets - Rio Tinto",
+        "level": 0,
+        "spacetype": "Toilet",
+        "sporttype": "Male, Women",
+        "icon": "restroom",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84042629467216",
+        "latitude": "-31.957521303609187"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.840426294672156, -31.957521303609187]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 28,
+        "name": "Spinway Bike Hire",
+        "level": 0,
+        "spacetype": "Entry",
+        "sporttype": "Cycle",
+        "icon": "bicycle",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": true,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8416978180677",
+        "latitude": "-31.960069179798744"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.841697818067701, -31.960069179798744]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 29,
+        "name": "Cork Oak Gazebo",
+        "level": 0,
+        "spacetype": "Park",
+        "sporttype": "Open Space",
+        "icon": "vector-square",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83722989032071",
+        "latitude": "-31.953612463512325"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.837229890320714, -31.953612463512325]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 30,
+        "name": "Water Fountain",
+        "level": 0,
+        "spacetype": "Landmark",
+        "sporttype": "Statue, Artwork",
+        "icon": "water",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84361052774898",
+        "latitude": "-31.95494297977544"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.843610527748979, -31.954942979775439]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 31,
+        "name": "The Lodge",
+        "level": 0,
+        "spacetype": "Building",
+        "sporttype": "Lodge",
+        "icon": "hotel",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84408897639868",
+        "latitude": "-31.954548078373342"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.84408897639868, -31.954548078373342]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 32,
+        "name": "Willong Pavilion",
+        "level": 0,
+        "spacetype": "Park",
+        "sporttype": "Open Space",
+        "icon": "vector-square",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83780601995474",
+        "latitude": "-31.954227518504474"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.837806019954741, -31.954227518504474]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 33,
+        "name": "Hale Oval",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": "115.83732726434336",
+        "latitude": "-31.95458323872842"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.837327264343358, -31.954583238728421]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 34,
+        "name": "Kings Park Road Precinct",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": "115.83926933512846",
+        "latitude": "-31.952839048964314"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.839269335128463, -31.952839048964314]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 35,
+        "name": "Fraser Avenue North",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84380689782971",
+        "latitude": "-31.95587177381651"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.843806897829708, -31.955871773816511]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 36,
+        "name": "Marri Gazibo",
+        "level": 0,
+        "spacetype": "Park",
+        "sporttype": "Open Space",
+        "icon": "vector-square",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83855255412841",
+        "latitude": "-31.95381901228987"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.838552554128412, -31.95381901228987]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 37,
+        "name": "Rifle Range North",
+        "level": 0,
+        "spacetype": "Building",
+        "sporttype": "Building",
+        "icon": "building",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8376870072604",
+        "latitude": "-31.9533118194617"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.844370651982132, -31.957267160782425]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 37,
+        "name": "River Gum Gazebo",
+        "level": 0,
+        "spacetype": "Park",
+        "sporttype": "Open Space",
+        "icon": "vector-square",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84203638027223",
+        "latitude": "-31.957128319367634"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.837687007260399, -31.9533118194617]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 39,
+        "name": "Biodiversity Conservation Centre",
+        "level": 0,
+        "spacetype": "Building",
+        "sporttype": "Building",
+        "icon": "building",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8422771104949",
+        "latitude": "-31.956702614217303"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.843063315566738, -31.955646566237903]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 39,
+        "name": "Biodiversity Conservation Centre",
+        "level": 0,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8422771104949",
+        "latitude": "-31.956702614217303"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.843063315566738, -31.955646566237903]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 41,
+        "name": "Mt Eliza House",
+        "level": 0,
+        "spacetype": "Building",
+        "sporttype": "Building",
+        "icon": "building",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": "115.84338879725357",
+        "latitude": "-31.957793838290588"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.84278561927988, -31.958373294804705]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 41,
+        "name": "Mt Eliza House",
+        "level": 0,
+        "spacetype": "Building",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": "115.84338879725357",
+        "latitude": "-31.957793838290588"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.84278561927988, -31.958373294804705]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 42,
+        "name": "BGPA Administration and Booking Office",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": "115.84378370301211",
+        "latitude": "-31.957449604967014"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.843388797253567, -31.957793838290588]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 43,
+        "name": "Old Tea Pavilion",
+        "level": 0,
+        "spacetype": "Park",
+        "sporttype": "Open Spaces",
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8443314318896",
+        "latitude": "-31.959128303945768"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.843783703012107, -31.957449604967014]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 44,
+        "name": "Kaarta Gar-up Lookout",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8441880756896",
+        "latitude": "-31.959653823361975"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.8443314318896, -31.959128303945768]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 46,
+        "name": "Rifle Range South",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84425704895568",
+        "latitude": "-31.958501807437262"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.844257048955683, -31.958501807437262]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 47,
+        "name": "Botanic Terraces and Pavilion",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84289381263858",
+        "latitude": "-31.961193646781595"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.842893812638579, -31.961193646781595]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 45,
+        "name": "Rotary Wishing Well",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": "Unknown",
+        "icon": "monument",
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84464113537835",
+        "latitude": "-31.96084598398896"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.844188075689601, -31.959653823361975]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 49,
+        "name": "Water Garden Pavilion",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83898262272884",
+        "latitude": "-31.964112585438862"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.838982622728835, -31.964112585438862]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 50,
+        "name": "Wildflower Pavilion",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.84059470377039",
+        "latitude": "-31.962077140365157"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.840594703770392, -31.962077140365157]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 48,
+        "name": "State War Memorial",
+        "level": 0,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.844641135378353, -31.96084598398896]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 52,
+        "name": "Beedawong",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.8386228798118",
+        "latitude": "-31.964734454247594"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.838622879811794, -31.964734454247594]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 53,
+        "name": "Roe Lawn",
+        "level": 0,
+        "spacetype": "Park",
+        "sporttype": "Open Spaces",
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83739353277592",
+        "latitude": "-31.966251245743273"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.83739353277592, -31.966251245743273]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 54,
+        "name": "Acacia Steps",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83798318657995",
+        "latitude": "-31.963795912618934"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.837983186579947, -31.963795912618934]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 55,
+        "name": "Marlee Pavilion",
+        "level": 0,
+        "spacetype": "Unknown",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": "115.83730833050605",
+        "latitude": "-31.96704806754458"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.837308330506048, -31.967048067544582]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 56,
+        "name": "Sheoak Lawn",
+        "level": null,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": "May Drive, Parkland, Kings Park WA 6005, Australia",
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.822289195227555, -31.965768508869136]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 57,
+        "name": "Lakeview Lawn",
+        "level": null,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.821664589474707, -31.965535309309459]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 58,
+        "name": "Vietnam Memorial Pavilion",
+        "level": null,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": false,
+        "entrypoint": false,
+        "status": false,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.82094744953632, -31.965283637832993]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 59,
+        "name": "Grass Trees Lawn",
+        "level": null,
+        "spacetype": "Park",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.820961057504761, -31.964828780295189]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 60,
+        "name": "Wollemi Pine Lawn",
+        "level": null,
+        "spacetype": "Park",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.822666135954137, -31.96478952852388]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 61,
+        "name": "Cinema Lawn",
+        "level": null,
+        "spacetype": "Park",
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.822845761137955, -31.965186663318502]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 62,
+        "name": "Saw Avenue Amphitheatre",
+        "level": null,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.823637064504467, -31.961940266896477]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 63,
+        "name": "Variety Pavilion",
+        "level": null,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.823622776137569, -31.96098491323287]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 64,
+        "name": "Saw Ave Lawn East",
+        "level": null,
+        "spacetype": null,
+        "sporttype": null,
+        "icon": null,
+        "summary": null,
+        "address": null,
+        "openingtimes": null,
+        "url": null,
+        "urlname": null,
+        "navigable": true,
+        "entrypoint": false,
+        "status": true,
+        "highlight": false,
+        "longitude": null,
+        "latitude": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.825238041994922, -31.961391300537706]
+      }
+    }
+  ]
+}
