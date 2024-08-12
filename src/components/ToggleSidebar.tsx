@@ -13,8 +13,14 @@ interface SidebarProps {
 // Define the type for the icon state
 type IconType = React.ReactNode | null;
 
-const ToggleSidebar: React.FC<SidebarProps> = ({ clickedFixSidebarItem, isFixSidebarItemClicked, setIsFixSidebarItemClicked }) => {
-  const [isClickedItemVal, setIsClickedItemVal] = useState<string>(clickedFixSidebarItem);
+const ToggleSidebar: React.FC<SidebarProps> = ({
+  clickedFixSidebarItem,
+  isFixSidebarItemClicked,
+  setIsFixSidebarItemClicked,
+}) => {
+  const [isClickedItemVal, setIsClickedItemVal] = useState<string>(
+    clickedFixSidebarItem
+  );
   const [isClickedItemIcon, setIsClickedItemIcon] = useState<IconType>(null);
 
   useEffect(() => {
@@ -39,7 +45,9 @@ const ToggleSidebar: React.FC<SidebarProps> = ({ clickedFixSidebarItem, isFixSid
   return (
     <div className=" ">
       <div
-        className={`absolute z-9 ${isFixSidebarItemClicked?'border-r border-slate-600':''} h-[100vh] w-64 bg-slate-200 text-white transition-transform duration-200 transform ${
+        className={`absolute z-9 ${
+          isFixSidebarItemClicked ? "border-r border-slate-600" : ""
+        } h-[100vh] w-64 bg-slate-200 text-white transition-transform duration-200 transform ${
           isFixSidebarItemClicked ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -49,7 +57,7 @@ const ToggleSidebar: React.FC<SidebarProps> = ({ clickedFixSidebarItem, isFixSid
           </div>
           <ClearIcon
             onClick={toggleSidebar}
-            className="absolute text-slate-900 hover:cursor-pointer right-2 top-2"
+            className="absolute text-slate-900 hover:cursor-pointer hover:bg-slate-300 duration-200 right-2 top-2"
           />
         </div>
       </div>
