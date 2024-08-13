@@ -37,22 +37,40 @@ interface GeoJsonFeature {
 interface GeoJsonData {
   type: "FeatureCollection";
   features: GeoJsonFeature[];
+  
+}
+interface MainMapProp{
+    radiusData: number;
 }
 
-const MainMap = () => {
+const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
   const [geoJsonData, setGeoJsonData] = useState<GeoJsonData | null>(null);
+
   const viewRef = useRef<View | null>(null);
   const mapRef = useRef<Map | undefined>(undefined);
   const markerSourceRef = useRef<VectorSource | null>(null);
   const pointSourceRef = useRef<VectorSource | null>(null);
-  const circleRadiusRef = useRef<number>(500);
+  const circleRadiusRef = useRef<number>(200);
   const highlightedPointsRef = useRef<Feature[]>([]);
   const [highlightedPoints, setHighlightedPoints] = useState<Feature[]>([]);
-  const [circleRadius, setCircleRadius] = useState<number>(500);
+  const [circleRadius, setCircleRadius] = useState<number>(radiusData);
   const popoverRef = useRef<HTMLDivElement | null>(null);
   const [popoverVisible, setPopoverVisible] = useState<boolean>(false);
   const [popoverContent, setPopoverContent] =
     useState<FeatureProperties | null>(null);
+
+
+
+  useEffect(() => {
+
+      setCircleRadius(radiusData);
+
+
+  },[radiusData])
+
+
+//fetch check and set geojson data
+
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -84,6 +102,10 @@ const MainMap = () => {
 
     fetchApi();
   }, []);
+
+
+
+
 
   useEffect(() => {
     if (geoJsonData && !mapRef.current) {
@@ -141,9 +163,9 @@ const MainMap = () => {
         source: drawSource,
         style: new Style({
           fill: new Fill({ color: "rgba(255, 255, 255, 0.2)" }),
-          stroke: new Stroke({ color: "#2eca6f", width: 2 }),
+          stroke: new Stroke({ color: "#2eca6f", width: 0 }),
           image: new CircleStyle({
-            radius: 7,
+            radius: 400,
             fill: new Fill({ color: "#2eca6f" }),
           }),
         }),
@@ -275,7 +297,7 @@ const MainMap = () => {
             olFeature.setStyle(
               new Style({
                 image: new CircleStyle({
-                  radius: 5,
+                  radius: 15,
                   fill: new Fill({ color: "#00ff00" }),
                   stroke: new Stroke({ color: "#000", width: 1 }),
                 }),
@@ -342,12 +364,20 @@ const MainMap = () => {
     }
   }, [geoJsonData]);
 
-  const radiusChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    const newRadius = parseInt(e.target.value);
-    if (newRadius < 100 || newRadius > 3000) return;
-    setCircleRadius(newRadius);
-    circleRadiusRef.current = newRadius; // Update the ref with the new value
-  };
+//   const radiusChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    
+//     if (newRadius < 100 || newRadius > 3000) return;
+//     setCircleRadius();
+//     circleRadiusRef.current = newRadius; // Update the ref with the new value
+//   };
+
+
+  useEffect(()=>{
+
+    if(radiusData < 100 || radiusData>3000)return;
+    setCircleRadius(radiusData);
+    circleRadiusRef.current = radiusData; 
+  },[radiusData])
 
   return (
     <div className="flex">

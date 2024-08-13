@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import ClearIcon from "@mui/icons-material/Clear";
 import LayersOutlinedIcon from "@mui/icons-material/LayersOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import SettingsItems from "./SettingsItems";
+import LayersItems from "./LayersItems";
 
 // Define the types for props
 interface SidebarProps {
   clickedFixSidebarItem: string;
   isFixSidebarItemClicked: boolean;
   setIsFixSidebarItemClicked: React.Dispatch<React.SetStateAction<boolean>>;
+  handleRadiusChangeClicked: (radiusValue: number) => void;
 }
 
 // Define the type for the icon state
@@ -17,11 +20,15 @@ const ToggleSidebar: React.FC<SidebarProps> = ({
   clickedFixSidebarItem,
   isFixSidebarItemClicked,
   setIsFixSidebarItemClicked,
+  handleRadiusChangeClicked,
 }) => {
   const [isClickedItemVal, setIsClickedItemVal] = useState<string>(
     clickedFixSidebarItem
   );
   const [isClickedItemIcon, setIsClickedItemIcon] = useState<IconType>(null);
+  const [isClickedItems, setIsClickedItems] = useState<React.ReactNode | null>(
+    null
+  );
 
   useEffect(() => {
     setIsClickedItemVal(clickedFixSidebarItem);
@@ -36,14 +43,29 @@ const ToggleSidebar: React.FC<SidebarProps> = ({
           return null;
       }
     });
-  }, [clickedFixSidebarItem]);
+
+    setIsClickedItems(() => {
+      switch (clickedFixSidebarItem.toLowerCase()) {
+        case "layers":
+          return <LayersItems />;
+        case "settings":
+          return (
+            <SettingsItems
+              handleRadiusChangeClicked={handleRadiusChangeClicked}
+            />
+          );
+        default:
+          return null;
+      }
+    });
+  }, [clickedFixSidebarItem, handleRadiusChangeClicked]);
 
   const toggleSidebar = () => {
     setIsFixSidebarItemClicked(!isFixSidebarItemClicked);
   };
 
   return (
-    <div className=" ">
+    <div>
       <div
         className={`absolute z-9 ${
           isFixSidebarItemClicked ? "border-r border-slate-600" : ""
@@ -51,16 +73,16 @@ const ToggleSidebar: React.FC<SidebarProps> = ({
           isFixSidebarItemClicked ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div >
-          <div className="h-10 flex items-center px-2 border-b text-slate-800 border-slate-400">
-            {isClickedItemIcon} <p className="font-medium">{isClickedItemVal}</p>
+        <div className="text-slate-800">
+          <div className="h-10 flex items-center px-2 border-b border-slate-400">
+            {isClickedItemIcon}{" "}
+            <p className="font-medium">{isClickedItemVal}</p>
           </div>
           <ClearIcon
             onClick={toggleSidebar}
             className="absolute text-slate-900 hover:cursor-pointer hover:bg-slate-300 duration-200 right-2 top-2"
           />
-
-          
+          <div>{isClickedItems}</div>
         </div>
       </div>
     </div>

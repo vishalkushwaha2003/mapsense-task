@@ -1,9 +1,7 @@
-import  { useState } from "react";
+import { useState } from "react";
 import FixSidebar from "./components/FixSidebar";
 import MainContent from "./components/MainContent";
 import ToggleSidebar from "./components/ToggleSidebar";
-
-
 
 function App() {
   const [clickedFixSidebarItem, setClickedFixSidebarItem] =
@@ -11,11 +9,16 @@ function App() {
   const [isFixSidebarItemClicked, setIsFixSidebarItemClicked] =
     useState<boolean>(false);
 
+  const [radiusData, setRadiusData] = useState<number>(500);
+
   const handleClickedFixSidebarItem = (val: string) => {
     setClickedFixSidebarItem(val);
-    
-      setIsFixSidebarItemClicked(true);
-    
+
+    setIsFixSidebarItemClicked(true);
+  };
+
+  const handleRadiusChangeClicked = (val: number) => {
+    setRadiusData(val);
   };
 
   return (
@@ -26,9 +29,13 @@ function App() {
           clickedFixSidebarItem={clickedFixSidebarItem}
           isFixSidebarItemClicked={isFixSidebarItemClicked}
           setIsFixSidebarItemClicked={setIsFixSidebarItemClicked}
+          handleRadiusChangeClicked={handleRadiusChangeClicked}
         />
       </div>
-      <MainContent isFixSidebarItemClicked={isFixSidebarItemClicked}/>
+      <MainContent
+        isFixSidebarItemClicked={isFixSidebarItemClicked}
+        radiusData={radiusData}
+      />
     </div>
   );
 }
