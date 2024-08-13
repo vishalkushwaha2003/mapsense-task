@@ -19,6 +19,9 @@ import { ZoomSlider } from "ol/control.js";
 interface FeatureProperties {
   name: string;
   type: string;
+  navigable: boolean;
+  entryPoint: boolean;
+  status: boolean;
 }
 
 interface FeatureGeometry {
@@ -334,7 +337,10 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData ,zoomValSlider }) => {
           if (properties) {
             const content: FeatureProperties = {
               name: properties.name,
-              type: properties.sportType,
+              type: properties.sporttype,
+              navigable: properties.navigable,
+              status: properties.status,
+              entryPoint: properties.entryPoint,
             };
             console.log("this is content: ", content);
             setPopoverContent(content);
@@ -345,9 +351,9 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData ,zoomValSlider }) => {
           if (popoverRef.current) {
             const pixel = map.getPixelFromCoordinate(coordinates);
 
-            const top = pixel[1] - 70 + "px";
+            const top = pixel[1] - 90 + "px";
 
-            const left = pixel[0] + 70 + "px";
+            const left = pixel[0] + 80 + "px";
 
             popoverRef.current.style.display = "relative";
             popoverRef.current.style.left = left;
@@ -416,8 +422,17 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData ,zoomValSlider }) => {
           <div>
             <strong>Name:</strong> {popoverContent.name}
           </div>
-          <div>
+          {popoverContent.type!==null?<div>
             <strong>Type:</strong> {popoverContent.type}
+          </div>:''}
+          <div>
+            <strong>Navigable:</strong> {popoverContent.navigable ? "Yes" : "No"}
+          </div>
+          <div>
+            <strong>Entry Point:</strong> {popoverContent.entryPoint ? "Yes" : "No"}
+          </div>
+          <div>
+            <strong>Status:</strong> {popoverContent.status ? "Active" : "Inactive"}
           </div>
         </div>
       )}
