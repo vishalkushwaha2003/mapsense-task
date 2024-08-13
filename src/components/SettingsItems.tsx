@@ -14,7 +14,7 @@ const SettingsItems: React.FC<SettingsItemsProps> = ({
   handleZoomValSlider,
 }) => {
   
-  const [userRadius, setUserRadius] = useState<number>(0);
+  const [userRadius, setUserRadius] = useState<number>(100);
   const [isClicked, setIsClickedItem] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
 
