@@ -9,7 +9,7 @@ function App() {
   const [isFixSidebarItemClicked, setIsFixSidebarItemClicked] =
     useState<boolean>(false);
 
-  const [radiusData, setRadiusData] = useState<number>(500);
+  const [radiusData, setRadiusData] = useState<number>(100);
 
   const handleClickedFixSidebarItem = (val: string) => {
     setClickedFixSidebarItem(val);

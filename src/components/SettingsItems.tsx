@@ -9,8 +9,8 @@ interface SettingsItemsProps {
 const SettingsItems: React.FC<SettingsItemsProps> = ({
   handleRadiusChangeClicked,
 }) => {
-  const [radiusValue, setRadiusValue] = useState<number>(500);
-  const [isClicked, setIsClickedItem] = useState<boolean>(false);
+  const [radiusValue, setRadiusValue] = useState<number>(100);
+  const [isClicked, setIsClickedItem] = useState<boolean>(true);
 
   const handleRadiusChange = (e: ChangeEvent<HTMLInputElement>) => {
     setRadiusValue(Number(e.target.value));

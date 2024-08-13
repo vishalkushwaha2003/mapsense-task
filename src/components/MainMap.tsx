@@ -50,7 +50,7 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
   const mapRef = useRef<Map | undefined>(undefined);
   const markerSourceRef = useRef<VectorSource | null>(null);
   const pointSourceRef = useRef<VectorSource | null>(null);
-  const circleRadiusRef = useRef<number>(200);
+  const circleRadiusRef = useRef<number>(100);
   const highlightedPointsRef = useRef<Feature[]>([]);
   const [highlightedPoints, setHighlightedPoints] = useState<Feature[]>([]);
   const [circleRadius, setCircleRadius] = useState<number>(radiusData);
@@ -208,8 +208,8 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
       markerSourceRef.current = markerSource;
 
       const view = new View({
-        center: [12894206.112814296, -3758368.6230910067],
-        zoom: 15,
+        center: [12895536.850603264, -3757448.414444618],
+        zoom: 17,
       });
       viewRef.current = view;
 
@@ -297,8 +297,8 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
             olFeature.setStyle(
               new Style({
                 image: new CircleStyle({
-                  radius: 15,
-                  fill: new Fill({ color: "#00ff00" }),
+                  radius: 8,
+                  fill: new Fill({ color: "rgb(234 179 8)" }),
                   stroke: new Stroke({ color: "#000", width: 1 }),
                 }),
               })
