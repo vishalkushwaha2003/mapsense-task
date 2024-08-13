@@ -24,7 +24,7 @@ const SettingsItems: React.FC<SettingsItemsProps> = ({
     setIsClickedItem(!isClicked);
   };
 
-  const handleSliderChange = (event: Event, value: number | number[]) => {
+  const handleSliderChange = (_event: Event, value: number | number[]) => {
     handleZoomValSlider(value as number);
   };
 
