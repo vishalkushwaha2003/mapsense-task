@@ -61,12 +61,7 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
 
 
 
-  useEffect(() => {
-
-      setCircleRadius(radiusData);
-
-
-  },[radiusData])
+ 
 
 
 //fetch check and set geojson data
@@ -126,7 +121,7 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
             style = new Style({
               image: new CircleStyle({
                 radius: 5,
-                fill: new Fill({ color: "#ff0000" }),
+                fill: new Fill({ color: "#0000ff" }),
                 stroke: new Stroke({ color: "#000", width: 1 }),
               }),
             });
@@ -180,24 +175,24 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
             return new Style({
               image: new CircleStyle({
                 radius: 5,
-                fill: new Fill({ color: "#0000ff" }),
-                stroke: new Stroke({ color: "#fff", width: 2 }),
+                fill: new Fill({ color: "#ff0000" }),
+                stroke: new Stroke({ color: "#fff", width: 1 }),
               }),
             });
           } else if (geometryType === "Circle") {
             const count = feature.get("count");
             return new Style({
               stroke: new Stroke({
-                color: "#2eca6f",
-                width: 2,
+                color: "rgb(255,0,0)",
+                width: 1,
               }),
               fill: new Fill({
-                color: "rgba(0, 255, 0, 0.1)",
+                color: "rgba(255, 0, 0, 0.1)",
               }),
               text: new Text({
                 text: count !== undefined ? count.toString() : "",
                 font: "24px Calibri,sans-serif",
-                fill: new Fill({ color: "#000" }),
+                fill: new Fill({ color: "#f00",}),
                 textAlign: "center",
                 offsetY: -20,
               }),
@@ -240,7 +235,7 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
               new Style({
                 image: new CircleStyle({
                   radius: 5,
-                  fill: new Fill({ color: "#ff0000" }),
+                  fill: new Fill({ color: "#0000ff" }),
                   stroke: new Stroke({ color: "#000", width: 1 }),
                 }),
               })
@@ -297,7 +292,7 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
             olFeature.setStyle(
               new Style({
                 image: new CircleStyle({
-                  radius: 8,
+                  radius: 7,
                   fill: new Fill({ color: "rgb(234 179 8)" }),
                   stroke: new Stroke({ color: "#000", width: 1 }),
                 }),
@@ -353,14 +348,14 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
         }
       };
 
-      map.on("pointermove", handleHover);
+    //   map.on("pointermove", handleHover);
 
-      map.on("loadstart", function () {
-        map.getTargetElement().classList.add("spinner");
-      });
-      map.on("loadend", function () {
-        map.getTargetElement().classList.remove("spinner");
-      });
+    //   map.on("loadstart", function () {
+    //     map.getTargetElement().classList.add("spinner");
+    //   });
+    //   map.on("loadend", function () {
+    //     map.getTargetElement().classList.remove("spinner");
+    //   });
     }
   }, [geoJsonData]);
 
