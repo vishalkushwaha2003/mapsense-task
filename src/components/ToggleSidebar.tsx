@@ -11,6 +11,7 @@ interface SidebarProps {
   isFixSidebarItemClicked: boolean;
   setIsFixSidebarItemClicked: React.Dispatch<React.SetStateAction<boolean>>;
   handleRadiusChangeClicked: (radiusValue: number) => void;
+  handleZoomValSlider: (zoomVal: number) => void;
 }
 
 // Define the type for the icon state
@@ -21,6 +22,7 @@ const ToggleSidebar: React.FC<SidebarProps> = ({
   isFixSidebarItemClicked,
   setIsFixSidebarItemClicked,
   handleRadiusChangeClicked,
+  handleZoomValSlider,
 }) => {
   const [isClickedItemVal, setIsClickedItemVal] = useState<string>(
     clickedFixSidebarItem
@@ -52,6 +54,7 @@ const ToggleSidebar: React.FC<SidebarProps> = ({
           return (
             <SettingsItems
               handleRadiusChangeClicked={handleRadiusChangeClicked}
+              handleZoomValSlider={handleZoomValSlider}
             />
           );
         default:

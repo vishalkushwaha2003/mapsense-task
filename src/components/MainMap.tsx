@@ -13,6 +13,8 @@ import Point from "ol/geom/Point";
 import Circle from "ol/geom/Circle";
 import * as turf from "@turf/turf";
 import MapBrowserEvent from "ol/MapBrowserEvent";
+import { ZoomSlider } from "ol/control.js";
+
 
 interface FeatureProperties {
   name: string;
@@ -37,9 +39,10 @@ interface GeoJsonData {
 }
 interface MainMapProp {
   radiusData: number;
+  zoomValSlider: number;
 }
 
-const MainMap: React.FC<MainMapProp> = ({ radiusData }) => {
+const MainMap: React.FC<MainMapProp> = ({ radiusData ,zoomValSlider }) => {
   const [geoJsonData, setGeoJsonData] = useState<GeoJsonData | null>(null);
 
   const viewRef = useRef<View | null>(null);
@@ -55,6 +58,16 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData }) => {
   const [popoverContent, setPopoverContent] =
     useState<FeatureProperties | null>(null);
 
+    const [zoomVal,setZoomVal] = useState<number>(17);
+
+
+
+    console.log('zoom',zoomVal)
+
+    useEffect(()=>{
+        setZoomVal(zoomValSlider);
+
+    },[zoomValSlider])
   //fetch check and set geojson data
 
   useEffect(() => {
@@ -187,7 +200,9 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData }) => {
 
       const view = new View({
         center: [12895536.850603264, -3757448.414444618],
-        zoom: 17,
+        zoom : zoomVal,
+        
+       
       });
       viewRef.current = view;
 
@@ -202,8 +217,20 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData }) => {
           markerLayer,
         ],
         view: view,
+
       });
+
+
+
+
       mapRef.current = map;
+
+
+      
+          
+
+
+     
 
       map.on("singleclick", function (event) {
         const coordinates = event.coordinate;
@@ -317,10 +344,14 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData }) => {
 
           if (popoverRef.current) {
             const pixel = map.getPixelFromCoordinate(coordinates);
-            const left = pixel[0] + 280 + "px";
-            const top = pixel[1] - 150 + "px";
 
+            const top = pixel[1] - 70 + "px";
+
+            const left = pixel[0] + 70 + "px";
+
+            popoverRef.current.style.display = "relative";
             popoverRef.current.style.left = left;
+
             popoverRef.current.style.top = top;
           }
         } else {
@@ -337,7 +368,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData }) => {
       //     map.getTargetElement().classList.remove("spinner");
       //   });
     }
-  }, [geoJsonData]);
+  }, [geoJsonData,zoomVal]);
 
   //   const radiusChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
 

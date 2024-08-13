@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import Chip from '@mui/material/Chip';
 
 // Define the type for your GeoJSON data
 interface GeoJsonData {
@@ -45,7 +46,7 @@ function LayersItems() {
     fetchApi();
   }, []);
 
-  return <div>{geoJsonData!==null && geoJsonData.name}</div>;
+  return <div className="p-2 flex justify-center"><Chip label={geoJsonData!==null && geoJsonData.name} className="hover:cursor-pointer hover:bg-slate-400 duration-100" /></div>;
 }
 
 export default LayersItems;

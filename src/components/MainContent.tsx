@@ -4,11 +4,14 @@ import MainMap from "./MainMap";
 interface MainContentProps {
   isFixSidebarItemClicked: boolean;
   radiusData: number;
+  zoomValSlider: number;
 }
 
 const MainContent: React.FC<MainContentProps> = ({
   isFixSidebarItemClicked,
   radiusData,
+  zoomValSlider,
+
 }) => {
   return (
     <div
@@ -18,7 +21,7 @@ const MainContent: React.FC<MainContentProps> = ({
           : "w-full "
       }`}
     >
-      <MainMap radiusData={radiusData} />
+      <MainMap radiusData={radiusData} zoomValSlider={zoomValSlider} />
     </div>
   );
 };
