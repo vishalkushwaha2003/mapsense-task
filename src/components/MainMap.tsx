@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import {  useEffect, useRef, useState } from "react";
 import { Map, View } from "ol";
 import Feature from "ol/Feature";
 import GeoJSON from "ol/format/GeoJSON";
@@ -8,12 +8,12 @@ import "ol/ol.css";
 import OSM from "ol/source/OSM";
 import VectorSource from "ol/source/Vector";
 import { Circle as CircleStyle, Fill, Stroke, Style, Text } from "ol/style";
-import { fromLonLat, get as getProjection, toLonLat } from "ol/proj";
+import {  get as getProjection, toLonLat } from "ol/proj";
 import Point from "ol/geom/Point";
 import Circle from "ol/geom/Circle";
 import * as turf from "@turf/turf";
 import MapBrowserEvent from "ol/MapBrowserEvent";
-import { ZoomSlider } from "ol/control.js";
+
 
 
 interface FeatureProperties {
@@ -45,7 +45,7 @@ interface MainMapProp {
   zoomValSlider: number;
 }
 
-const MainMap: React.FC<MainMapProp> = ({ radiusData ,zoomValSlider }) => {
+const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
   const [geoJsonData, setGeoJsonData] = useState<GeoJsonData | null>(null);
 
   const viewRef = useRef<View | null>(null);
@@ -61,16 +61,11 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData ,zoomValSlider }) => {
   const [popoverContent, setPopoverContent] =
     useState<FeatureProperties | null>(null);
 
-    const [zoomVal,setZoomVal] = useState<number>(17);
+   
+
+    console.log(highlightedPoints)
 
 
-
-    console.log('zoom',zoomVal)
-
-    useEffect(()=>{
-        setZoomVal(zoomValSlider);
-
-    },[zoomValSlider])
   //fetch check and set geojson data
 
   useEffect(() => {
@@ -203,7 +198,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData ,zoomValSlider }) => {
 
       const view = new View({
         center: [12895536.850603264, -3757448.414444618],
-        zoom : zoomVal,
+        zoom : 17,
         
        
       });
@@ -367,45 +362,21 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData ,zoomValSlider }) => {
 
       map.on("pointermove", handleHover);
 
-      //   map.on("loadstart", function () {
-      //     map.getTargetElement().classList.add("spinner");
-      //   });
-      //   map.on("loadend", function () {
-      //     map.getTargetElement().classList.remove("spinner");
-      //   });
+    
     }
-  }, [geoJsonData,zoomVal]);
+  }, [geoJsonData]);
 
-  //   const radiusChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-
-  //     if (newRadius < 100 || newRadius > 3000) return;
-  //     setCircleRadius();
-  //     circleRadiusRef.current = newRadius; // Update the ref with the new value
-  //   };
+ 
 
   useEffect(() => {
     if (radiusData < 100 || radiusData > 3000) return;
     setCircleRadius(radiusData);
-    circleRadiusRef.current = radiusData;
+    circleRadiusRef.current = circleRadius;
   }, [radiusData]);
 
   return (
     <div className="flex">
-      {/* <div className="w-[25vw] h-[100vh] pl-9 pt-10">
-        <label htmlFor="radius">
-          Radius of circle between 100 to 3000 meters
-        </label>
-        <input
-          type="number"
-          min={100}
-          max={3000}
-          className="border border-black px-2 py-1 rounded-lg w-40"
-          name="radius"
-          placeholder="Enter the radius "
-          defaultValue={500}
-          onChange={radiusChangeHandler}
-        />
-      </div> */}
+     
       <div className="w-full h-[100vh]" id="map"></div>
       {popoverVisible && popoverContent && (
         <div
