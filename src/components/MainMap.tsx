@@ -16,10 +16,7 @@ import MapBrowserEvent from "ol/MapBrowserEvent";
 
 interface FeatureProperties {
   name: string;
-  address: string;
-  male: boolean;
-  female: boolean;
-  paymentRequired: boolean;
+  type: string;
 }
 
 interface FeatureGeometry {
@@ -37,13 +34,12 @@ interface GeoJsonFeature {
 interface GeoJsonData {
   type: "FeatureCollection";
   features: GeoJsonFeature[];
-  
 }
-interface MainMapProp{
-    radiusData: number;
+interface MainMapProp {
+  radiusData: number;
 }
 
-const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
+const MainMap: React.FC<MainMapProp> = ({ radiusData }) => {
   const [geoJsonData, setGeoJsonData] = useState<GeoJsonData | null>(null);
 
   const viewRef = useRef<View | null>(null);
@@ -59,25 +55,16 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
   const [popoverContent, setPopoverContent] =
     useState<FeatureProperties | null>(null);
 
-
-
- 
-
-
-//fetch check and set geojson data
-
+  //fetch check and set geojson data
 
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const res = await fetch(
-          "src/components/data/toiletmap_sydney.geojson",
-          {
-            headers: {
-              Accept: "application/geo+json",
-            },
-          }
-        );
+        const res = await fetch("src/components/data/testData.geojson", {
+          headers: {
+            Accept: "application/geo+json",
+          },
+        });
 
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
@@ -97,10 +84,6 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
 
     fetchApi();
   }, []);
-
-
-
-
 
   useEffect(() => {
     if (geoJsonData && !mapRef.current) {
@@ -192,7 +175,7 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
               text: new Text({
                 text: count !== undefined ? count.toString() : "",
                 font: "24px Calibri,sans-serif",
-                fill: new Fill({ color: "#f00",}),
+                fill: new Fill({ color: "#f00" }),
                 textAlign: "center",
                 offsetY: -20,
               }),
@@ -323,13 +306,10 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
 
           if (properties) {
             const content: FeatureProperties = {
-              name: properties.Name,
-              male: properties.Male,
-              female: properties.Female,
-              address: properties.Address1,
-              paymentRequired: properties.PaymentRequired,
+              name: properties.name,
+              type: properties.sportType,
             };
-
+            console.log("this is content: ", content);
             setPopoverContent(content);
           }
 
@@ -348,31 +328,29 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
         }
       };
 
-    //   map.on("pointermove", handleHover);
+      map.on("pointermove", handleHover);
 
-    //   map.on("loadstart", function () {
-    //     map.getTargetElement().classList.add("spinner");
-    //   });
-    //   map.on("loadend", function () {
-    //     map.getTargetElement().classList.remove("spinner");
-    //   });
+      //   map.on("loadstart", function () {
+      //     map.getTargetElement().classList.add("spinner");
+      //   });
+      //   map.on("loadend", function () {
+      //     map.getTargetElement().classList.remove("spinner");
+      //   });
     }
   }, [geoJsonData]);
 
-//   const radiusChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    
-//     if (newRadius < 100 || newRadius > 3000) return;
-//     setCircleRadius();
-//     circleRadiusRef.current = newRadius; // Update the ref with the new value
-//   };
+  //   const radiusChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
 
+  //     if (newRadius < 100 || newRadius > 3000) return;
+  //     setCircleRadius();
+  //     circleRadiusRef.current = newRadius; // Update the ref with the new value
+  //   };
 
-  useEffect(()=>{
-
-    if(radiusData < 100 || radiusData>3000)return;
+  useEffect(() => {
+    if (radiusData < 100 || radiusData > 3000) return;
     setCircleRadius(radiusData);
-    circleRadiusRef.current = radiusData; 
-  },[radiusData])
+    circleRadiusRef.current = radiusData;
+  }, [radiusData]);
 
   return (
     <div className="flex">
@@ -408,16 +386,7 @@ const MainMap:React.FC<MainMapProp> = ({radiusData}) => {
             <strong>Name:</strong> {popoverContent.name}
           </div>
           <div>
-            <strong>Address:</strong> {popoverContent.address}
-          </div>
-          <div>
-            <strong>Male:</strong> {popoverContent.male}
-          </div>
-          <div>
-            <strong>Female:</strong> {popoverContent.female}
-          </div>
-          <div>
-            <strong>Payment Required:</strong> {popoverContent.paymentRequired}
+            <strong>Type:</strong> {popoverContent.type}
           </div>
         </div>
       )}
