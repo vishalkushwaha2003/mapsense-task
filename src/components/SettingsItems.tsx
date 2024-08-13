@@ -1,8 +1,8 @@
 import { Button } from "@mui/material";
 import { useState, ChangeEvent } from "react";
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
 
 interface SettingsItemsProps {
   handleRadiusChangeClicked: (radiusValue: number) => void;
@@ -10,18 +10,37 @@ interface SettingsItemsProps {
 }
 
 const SettingsItems: React.FC<SettingsItemsProps> = ({
-  handleRadiusChangeClicked, handleZoomValSlider
+  handleRadiusChangeClicked,
+  handleZoomValSlider,
 }) => {
-  const [radiusValue, setRadiusValue] = useState<number>(100);
+  
+  const [userRadius, setUserRadius] = useState<number>(0);
   const [isClicked, setIsClickedItem] = useState<boolean>(true);
+  const [error, setError] = useState<string>("");
 
   const handleRadiusChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setRadiusValue(Number(e.target.value));
+    const newRadius = parseInt(e.target.value);
+    setUserRadius(newRadius);
+
+    if (newRadius >= 100 && newRadius <= 3000) {
+      
+      setError(""); // Clear any previous error messages
+    } else {
+      setError("Enter between 99 and 3001"); // Show error message
+    }
+
+    
   };
 
   const handleClick = () => {
-    handleRadiusChangeClicked(radiusValue);
-    setIsClickedItem(!isClicked);
+    if (userRadius >= 100 && userRadius <= 3000) {
+      handleRadiusChangeClicked(userRadius);
+      console.log(userRadius , " my incoming radius in on click")
+      setIsClickedItem(!isClicked);
+      console.log('hiiiiiii')
+    } else {
+      alert("Please enter a valid radius before applying.");
+    }
   };
 
   const handleSliderChange = (_event: Event, value: number | number[]) => {
@@ -34,14 +53,19 @@ const SettingsItems: React.FC<SettingsItemsProps> = ({
       <div className="flex justify-center p-2">
         <input
           type="number"
-          className={`outline-none w-36 rounded-md px-1  ${isClicked ? "bg-slate-300" : ""}`}
+          className={`outline-none w-36 rounded-md px-1  ${
+            isClicked ? "bg-slate-300" : ""
+          }`}
           placeholder="Set Radius"
-          value={radiusValue}
+          value={userRadius}
           onChange={handleRadiusChange}
           disabled={isClicked}
         />
         {isClicked ? (
-          <EditOutlinedIcon className='hover:cursor-pointer' onClick={() => setIsClickedItem(!isClicked)} />
+          <EditOutlinedIcon
+            className="hover:cursor-pointer"
+            onClick={() => setIsClickedItem(!isClicked)}
+          />
         ) : (
           <Button
             sx={{
@@ -57,10 +81,15 @@ const SettingsItems: React.FC<SettingsItemsProps> = ({
           </Button>
         )}
       </div>
+      {error && (
+        <div className="font-bold text-red-800 text-center mt-2">
+          {error}
+        </div>
+      )}
 
       <div className="mt-4">
         <div className="text-center">- Set Zoom +</div>
-        <Box sx={{ width: 200, margin: 'auto' }}>
+        <Box sx={{ width: 200, margin: "auto" }}>
           <Slider
             size="small"
             onChange={handleSliderChange}
@@ -68,7 +97,7 @@ const SettingsItems: React.FC<SettingsItemsProps> = ({
             aria-label="Small"
             valueLabelDisplay="auto"
             sx={{
-              color: 'rgb(15 23 42)'
+              color: "rgb(15 23 42)",
             }}
           />
         </Box>

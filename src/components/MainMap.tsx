@@ -55,7 +55,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
   const circleRadiusRef = useRef<number>(100);
   const highlightedPointsRef = useRef<Feature[]>([]);
   const [highlightedPoints, setHighlightedPoints] = useState<Feature[]>([]);
-  const [circleRadius, setCircleRadius] = useState<number>(radiusData);
+//   const [circleRadius, setCircleRadius] = useState<number>(100);
   const popoverRef = useRef<HTMLDivElement | null>(null);
   const [popoverVisible, setPopoverVisible] = useState<boolean>(false);
   const [popoverContent, setPopoverContent] =
@@ -369,9 +369,9 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
  
 
   useEffect(() => {
-    if (radiusData < 100 || radiusData > 3000) return;
-    setCircleRadius(radiusData);
-    circleRadiusRef.current = circleRadius;
+       console.log('radusData in useEffect',radiusData)
+    // setCircleRadius(radiusData);
+    circleRadiusRef.current = radiusData;
   }, [radiusData]);
 
   return (
