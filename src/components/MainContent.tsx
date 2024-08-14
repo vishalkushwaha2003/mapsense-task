@@ -13,6 +13,8 @@ const MainContent: React.FC<MainContentProps> = ({
   zoomValSlider,
 
 }) => {
+
+    
   return (
     <div
       className={` transition-all duration-200  ${
@@ -21,7 +23,7 @@ const MainContent: React.FC<MainContentProps> = ({
           : "w-full "
       }`}
     >
-      <MainMap radiusData={radiusData} zoomValSlider={zoomValSlider} />
+      <MainMap radiusData={radiusData} zoomValSlider={zoomValSlider} isFixSidebarItemClicked={isFixSidebarItemClicked} />
     </div>
   );
 };

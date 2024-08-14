@@ -1,4 +1,4 @@
-import {  useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Map, View } from "ol";
 import Feature from "ol/Feature";
 import GeoJSON from "ol/format/GeoJSON";
@@ -8,12 +8,11 @@ import "ol/ol.css";
 import OSM from "ol/source/OSM";
 import VectorSource from "ol/source/Vector";
 import { Circle as CircleStyle, Fill, Stroke, Style, Text } from "ol/style";
-import {  get as getProjection, toLonLat } from "ol/proj";
+import { get as getProjection, toLonLat } from "ol/proj";
 import Point from "ol/geom/Point";
 import Circle from "ol/geom/Circle";
 import * as turf from "@turf/turf";
 import MapBrowserEvent from "ol/MapBrowserEvent";
-
 
 
 interface FeatureProperties {
@@ -43,9 +42,13 @@ interface GeoJsonData {
 interface MainMapProp {
   radiusData: number;
   zoomValSlider: number;
+  isFixSidebarItemClicked: boolean;
 }
 
-const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
+const MainMap: React.FC<MainMapProp> = ({
+  radiusData,
+  isFixSidebarItemClicked,
+}) => {
   const [geoJsonData, setGeoJsonData] = useState<GeoJsonData | null>(null);
 
   const viewRef = useRef<View | null>(null);
@@ -54,17 +57,13 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
   const pointSourceRef = useRef<VectorSource | null>(null);
   const circleRadiusRef = useRef<number>(100);
   const highlightedPointsRef = useRef<Feature[]>([]);
-  const [highlightedPoints, setHighlightedPoints] = useState<Feature[]>([]);
-//   const [circleRadius, setCircleRadius] = useState<number>(100);
+
   const popoverRef = useRef<HTMLDivElement | null>(null);
   const [popoverVisible, setPopoverVisible] = useState<boolean>(false);
   const [popoverContent, setPopoverContent] =
     useState<FeatureProperties | null>(null);
 
-   
-
-    console.log(highlightedPoints)
-
+ 
 
   //fetch check and set geojson data
 
@@ -96,8 +95,16 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
     fetchApi();
   }, []);
 
+
+
+  //this is for map rendering useEffect
   useEffect(() => {
+
+      //check the conditon of geojson data is present and the map is render or not 
     if (geoJsonData && !mapRef.current) {
+      
+
+      //vector source is used to check for vector geometric elements such as point, line , polygon basically for vector objects
       const vectorSource = new VectorSource({
         features: new GeoJSON().readFeatures(geoJsonData, {
           featureProjection: "EPSG:3857",
@@ -105,12 +112,15 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
       });
       pointSourceRef.current = vectorSource;
 
+
+      //this is layer on which vectors are drawn
       const vectorLayer = new VectorLayer({
         source: vectorSource,
+        //style function for styling
         style: (feature) => {
           const geometryType = feature.getGeometry()?.getType();
           let style;
-
+        // check for points and give style
           if (geometryType === "Point") {
             style = new Style({
               image: new CircleStyle({
@@ -127,42 +137,24 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
               }),
             });
 
-            const text = feature.get("name");
-            if (text) {
-              style.setText(
-                new Text({
-                  text: text,
-                  font: "12px Calibri,sans-serif",
-                  fill: new Fill({ color: "#fff" }),
-                  offsetX: 0,
-                  offsetY: -10,
-                  textAlign: "center",
-                  textBaseline: "middle",
-                })
-              );
-            }
+           
           }
 
           return style;
         },
       });
 
-      const drawSource = new VectorSource();
-      const drawVector = new VectorLayer({
-        source: drawSource,
-        style: new Style({
-          fill: new Fill({ color: "rgba(255, 255, 255, 0.2)" }),
-          stroke: new Stroke({ color: "#2eca6f", width: 0 }),
-          image: new CircleStyle({
-            radius: 400,
-            fill: new Fill({ color: "#2eca6f" }),
-          }),
-        }),
-      });
 
+
+
+
+   
+//marker sourse is use for marker generation
       const markerSource = new VectorSource();
+      //marker layer is used to drow or show the marker
       const markerLayer = new VectorLayer({
         source: markerSource,
+        //give styling to the marker
         style: (feature) => {
           const geometryType = feature.getGeometry()?.getType();
           if (geometryType === "Point") {
@@ -173,6 +165,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
                 stroke: new Stroke({ color: "#fff", width: 1 }),
               }),
             });
+            //this is generation of circle around the marker
           } else if (geometryType === "Circle") {
             const count = feature.get("count");
             return new Style({
@@ -185,25 +178,24 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
               }),
               text: new Text({
                 text: count !== undefined ? count.toString() : "",
-                font: "24px Calibri,sans-serif",
+                font: "24px Calibri,sans-serif ",
                 fill: new Fill({ color: "#f00" }),
                 textAlign: "center",
-                offsetY: -20,
+                offsetY: -25,
               }),
             });
           }
         },
       });
       markerSourceRef.current = markerSource;
-
+// this is for the view of the map set center and intial zoom level
       const view = new View({
         center: [12895536.850603264, -3757448.414444618],
-        zoom : 17,
-        
-       
+        zoom: 17,
       });
       viewRef.current = view;
 
+      // render the map with different properties below
       const map = new Map({
         target: "map",
         layers: [
@@ -211,28 +203,21 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
             source: new OSM(),
           }),
           vectorLayer,
-          drawVector,
+          
           markerLayer,
         ],
         view: view,
-
       });
-
-
-
 
       mapRef.current = map;
 
 
-      
-          
 
-
-     
-
+                
+ //add interaction when sigle click
       map.on("singleclick", function (event) {
         const coordinates = event.coordinate;
-        console.log("Cor:", coordinates);
+      
         const projection = getProjection("EPSG:3857");
 
         const currentRadius = circleRadiusRef.current;
@@ -249,7 +234,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
               })
             );
           });
-          setHighlightedPoints([]);
+          
           highlightedPointsRef.current = [];
 
           // Clear the previous marker and circle
@@ -285,6 +270,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
             if (geometry && geometry.getType() === "Point") {
               const coords = (geometry as Point).getCoordinates();
               const lonLatCoords = toLonLat(coords);
+              //locate the points on buffer
               if (buffered) {
                 return turf.booleanPointInPolygon(
                   turf.point(lonLatCoords),
@@ -295,7 +281,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
             return false;
           });
 
-          // Style points within the circle
+          // Style points within the circle with yellow color
           points.forEach((olFeature) => {
             olFeature.setStyle(
               new Style({
@@ -309,7 +295,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
           });
 
           // Update highlighted points state
-          setHighlightedPoints(points);
+         
           highlightedPointsRef.current = points;
 
           // Add features to source
@@ -319,6 +305,8 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
         }
       });
 
+
+      //now add content when hover on the point
       const handleHover = (event: MapBrowserEvent<PointerEvent>) => {
         const feature = map.forEachFeatureAtPixel(
           event.pixel,
@@ -337,7 +325,7 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
               status: properties.status,
               entryPoint: properties.entryPoint,
             };
-            console.log("this is content: ", content);
+           
             setPopoverContent(content);
           }
 
@@ -346,9 +334,13 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
           if (popoverRef.current) {
             const pixel = map.getPixelFromCoordinate(coordinates);
 
-            const top = pixel[1] - 90 + "px";
+            
 
-            const left = pixel[0] + 80 + "px";
+            let top = pixel[1] - 90 + "px";
+
+            let left = pixel[0] + 80 + "px";
+
+           
 
             popoverRef.current.style.display = "relative";
             popoverRef.current.style.left = left;
@@ -360,23 +352,19 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
         }
       };
 
+      // event handler on pointermove
       map.on("pointermove", handleHover);
-
-    
     }
-  }, [geoJsonData]);
+  }, [geoJsonData, isFixSidebarItemClicked]);
 
- 
 
+    //set the radius data from the radiusData coming from the input value in toggle sidebar by prop drillings
   useEffect(() => {
-       console.log('radusData in useEffect',radiusData)
-    // setCircleRadius(radiusData);
     circleRadiusRef.current = radiusData;
   }, [radiusData]);
 
   return (
     <div className="flex">
-     
       <div className="w-full h-[100vh]" id="map"></div>
       {popoverVisible && popoverContent && (
         <div
@@ -393,17 +381,24 @@ const MainMap: React.FC<MainMapProp> = ({ radiusData  }) => {
           <div>
             <strong>Name:</strong> {popoverContent.name}
           </div>
-          {popoverContent.type!==null?<div>
-            <strong>Type:</strong> {popoverContent.type}
-          </div>:''}
+          {popoverContent.type !== null ? (
+            <div>
+              <strong>Type:</strong> {popoverContent.type}
+            </div>
+          ) : (
+            ""
+          )}
           <div>
-            <strong>Navigable:</strong> {popoverContent.navigable ? "Yes" : "No"}
+            <strong>Navigable:</strong>{" "}
+            {popoverContent.navigable ? "Yes" : "No"}
           </div>
           <div>
-            <strong>Entry Point:</strong> {popoverContent.entryPoint ? "Yes" : "No"}
+            <strong>Entry Point:</strong>{" "}
+            {popoverContent.entryPoint ? "Yes" : "No"}
           </div>
           <div>
-            <strong>Status:</strong> {popoverContent.status ? "Active" : "Inactive"}
+            <strong>Status:</strong>{" "}
+            {popoverContent.status ? "Active" : "Inactive"}
           </div>
         </div>
       )}

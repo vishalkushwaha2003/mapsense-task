@@ -35,9 +35,9 @@ const SettingsItems: React.FC<SettingsItemsProps> = ({
   const handleClick = () => {
     if (userRadius >= 100 && userRadius <= 3000) {
       handleRadiusChangeClicked(userRadius);
-      console.log(userRadius , " my incoming radius in on click")
+    
       setIsClickedItem(!isClicked);
-      console.log('hiiiiiii')
+      
     } else {
       alert("Please enter a valid radius before applying.");
     }
